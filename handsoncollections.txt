@@ -1,0 +1,86 @@
+Collections Problem-1
+package collhandson;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Colle1 {
+
+	public static void main(String[] args) {
+		List<Integer> matches =new ArrayList<>();
+		Scanner s=new Scanner(System.in);
+		System.out.println("Number of matches");
+		int n=s.nextInt();   // number of matches
+		System.out.println("Enter each match runs");
+		for(int j=0;j<n;j++) {
+			matches.add(s.nextInt());
+		}
+		int sum=0;
+		for(int j=0;j<n;j++) {
+			sum += matches.get(j);
+		}
+		System.out.println(sum);
+		float avg=(float)sum/n;
+		System.out.println(avg);
+		
+
+	}
+
+}
+----------------------------------------------------------------------------
+Collections Problem-2
+package collhandson;
+
+import java.util.Scanner;
+import java.util.TreeSet;
+
+public class colle2 {
+
+	public static void main(String[] args) {
+		TreeSet<Integer> runs = new TreeSet<>();
+		Scanner s=new Scanner(System.in);
+		System.out.println("Number of matches");
+		int n=s.nextInt();  
+		System.out.println("Enter each match runs"); 
+		for(int i=0;i<n;i++) {
+			runs.add(s.nextInt()); 
+		}
+		System.out.println();
+		for(int r:runs) {
+			System.out.println(r);
+		}
+
+	}
+
+}
+------------------------------------------------------------------
+Collections Problem-3
+package collhandson;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+
+public class colle3 {
+
+	public static void main(String[] args) {
+		List<String> names= new ArrayList<>();
+		Scanner s =new Scanner(System.in);
+		System.out.println("Number of matches");
+		int n=s.nextInt();
+		System.out.println("Name of the Stadium");
+		for(int i=0;i<=n;i++) {
+			names.add(s.nextLine());
+		}
+		System.out.println("enter venue to fing frequency");
+		String venue=s.nextLine(); 
+		int freq=Collections.frequency(names, venue);
+		System.out.println("count "+freq);
+			
+
+	}
+
+}
+-----------------------------------
